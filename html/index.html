@@ -198,10 +198,12 @@
             getLogoAndHeaderText();
         }
         function initLinks() {
+            var erp_port = 8069;
+            var app_url = 'http://'+window.location.hostname+':'+erp_port;
             var erpElement = document.getElementById("erp-app-link");
             if (erpElement) {
-                                                                            erpElement.href = "http://10.0.2.15:8069";
-                                                                    }
+                erpElement.href = app_url;
+            }
         }
         function load(url, elementClass) {
             callAjax(url, function (data) {
